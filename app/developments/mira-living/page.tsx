@@ -1,3 +1,4 @@
+import { HeroVideo } from "@/components/media/HeroVideo";
 import { MediaSlot } from "@/components/media/MediaSlot";
 import SiteFooter from "@/components/SiteFooter";
 import { pageMeta } from "@/data/siteContent";
@@ -12,7 +13,7 @@ export default function Page() {
     <section data-hero="" aria-label="Development 01 · Nearing completion" style={{position:"relative",zIndex:"1"}}>
       <div style={{position:"relative",backgroundImage:"linear-gradient(15deg,#6f7e6b,#b9c0aa)",clipPath:"inset(0 round 0 0 min(4.33rem,12vw) min(4.33rem,12vw))"}}>
         <div data-hero-mask="" style={{position:"fixed",top:"0",left:"0",width:"100%",height:"100vh",WebkitMaskImage:"linear-gradient(0deg,rgb(0 0 0 / var(--bot,1)) 0%,rgb(0 0 0 / var(--top,1)) 100%)",maskImage:"linear-gradient(0deg,rgb(0 0 0 / var(--bot,1)) 0%,rgb(0 0 0 / var(--top,1)) 100%)"}}>
-          <div data-intro-img="" style={{position:"absolute",inset:"0",transformOrigin:"50% 65%"}}><MediaSlot k="mira.hero" eager style={{position:"absolute",inset:"0",backgroundImage:"repeating-linear-gradient(135deg,rgba(246,242,234,0.05) 0 1px,transparent 1px 16px),linear-gradient(160deg,#6b7767 0%,#4a544c 60%,#1c231f 100%)"}}><span data-ph-label="" style={{position:"absolute",right:"clamp(1rem,5vw,12rem)",top:"7rem",font:"600 0.66rem/1.3 ui-monospace,Menlo,monospace",letterSpacing:"0.06em",textTransform:"uppercase",color:"#f6f2ea"}}>Hero — MIRA Living</span></MediaSlot></div>
+          <div data-intro-img="" style={{position:"absolute",inset:"0",transformOrigin:"50% 65%"}}><HeroVideo k="mira" style={{position:"absolute",inset:"0",backgroundImage:"linear-gradient(160deg,#6b7767 0%,#4a544c 60%,#1c231f 100%)"}} /></div>
           <div style={{position:"absolute",inset:"0 0 auto 0",height:"13.33rem",backgroundImage:"linear-gradient(#0006,#0000)"}}></div>
           <div style={{position:"absolute",inset:"auto 0 0 0",height:"55%",backgroundImage:"linear-gradient(#1c231f00,#1c231f99)"}}></div>
         </div>

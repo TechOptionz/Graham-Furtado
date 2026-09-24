@@ -34,13 +34,21 @@ function format(v: number, f: NonNullable<ReturnType<typeof parseFigure>>) {
  * `data-count="n"` gives the target explicitly; an empty `data-count` reads the
  * figure from the element's own text, preserving its formatting ("98%", "09.26", "20+").
  */
-export function initCount({ gsap, ST, $$, reduce, EX }: MotionCtx) {
+export function initCount({ gsap, ST, $$, reduce, EX, cleanups }: MotionCtx) {
   if (reduce) return;
   $$("[data-count]").forEach((el) => {
     const attr = el.getAttribute("data-count") || "";
-    const fig = parseFigure(attr || el.textContent || "");
+    // The setup can run more than once on the same DOM (dev strict mode, GF.rerun),
+    // by which time the text has been zeroed. Keep the authored figure on the element.
+    let text = el.getAttribute("data-count-text");
+    if (text === null) {
+      text = el.textContent || "";
+      el.setAttribute("data-count-text", text);
+    }
+    const fig = parseFigure(attr || text);
     if (!fig) return;
-    const final = attr ? String(Math.round(fig.to)) : el.textContent || "";
+    const final = attr ? String(Math.round(fig.to)) : text;
+    cleanups.push(() => { el.textContent = final; });
 
     // Reserve the final width so the layout doesn't shift while the digits change.
     el.style.display = "inline-block";

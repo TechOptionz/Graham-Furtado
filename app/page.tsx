@@ -126,6 +126,7 @@ export default function Page() {
             </div>
           </div>
         </a>
+        <div data-stack-hold="" aria-hidden="true" style={{height:"70svh"}}></div>
         <a href="/developments/west-end" data-stack-card="" aria-label="West End, Brisbane — view proposal" style={{position:"sticky",top:"0",display:"block",height:"100svh",minHeight:"34rem",color:"#f6f2ea"}}>
           <div data-stack-inner="" style={{position:"absolute",inset:"0",overflow:"hidden",borderRadius:"min(4.33rem,12vw) min(4.33rem,12vw) 0 0",transformOrigin:"50% 0%",background:"#1c231f"}}>
             <div data-parallax="8" style={{position:"absolute",inset:"0",overflow:"hidden"}}>
