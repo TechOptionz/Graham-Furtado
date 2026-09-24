@@ -1,0 +1,61 @@
+/* Palette (every usage below and in the pages keeps the literal value the source uses). */
+:root {
+  --bg: #f6f2ea;
+  --surface: #eee9df;
+  --ink: #1c231f;
+  --body: #5f665f;
+  --accent: #6f7e6b;
+  --accent-light: #b9c0aa;
+  --rule: #6f7e6b40;
+  /* intermediate tones used in placeholder gradients */
+  --tone-1: #ece7dc;
+  --tone-2: #d3d5c3;
+  --tone-3: #cfd2bf;
+  --tone-4: #a9b19c;
+  --tone-5: #6b7767;
+  --tone-6: #4a544c;
+}
+
+/* ---- page helmet (identical on all eight pages) ---- */
+html{font-size:1.51vw;-webkit-text-size-adjust:100%}
+@media (min-width:1280px){html{font-size:1.17vw}}
+@media (min-width:1920px){html{font-size:1.04vw}}
+@media (max-width:991px){html{font-size:1.95vw}}
+@media (max-width:767px){html{font-size:3.13vw}}
+@media (max-width:479px){html{font-size:4.6875vw}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#f6f2ea;color:#5f665f;font-family:var(--font-inter),Arial,sans-serif;font-size:1rem;font-weight:500;line-height:1.4;letter-spacing:-0.01em;overflow-x:clip;-webkit-font-smoothing:antialiased}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-stopped{overflow:hidden}
+h1,h2,h3,h4,p{margin:0}
+a{color:inherit;text-decoration:none}a:hover{color:#1c231f}
+::selection{background:#b9c0aa;color:#1c231f}
+:focus-visible{outline:2px solid #6f7e6b;outline-offset:3px}
+@keyframes arrowLoop{0%,26.92%{transform:translateY(0)}53.84%{transform:translateY(100%)}53.85%,73.08%{transform:translateY(-100%)}100%{transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* ---- SiteChrome helmet ---- */
+[data-hero-header][data-solid="1"]{background:linear-gradient(180deg,rgba(246,242,234,.34),rgba(246,242,234,.16));-webkit-backdrop-filter:blur(12px) saturate(1.4);backdrop-filter:blur(12px) saturate(1.4);padding-top:1rem!important;padding-bottom:1rem!important;color:#1c231f!important;border-bottom:1px solid rgba(255,255,255,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 .6rem 2rem -1rem rgba(28,35,31,.25)}
+[data-hero-header][data-solid="1"]::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,0) 65%,rgba(255,255,255,.18) 100%)}
+[data-hero-header][data-solid="1"] a{color:#1c231f!important;border-color:rgba(28,35,31,.55)!important;background:rgba(255,255,255,.28)}
+[data-hero-header][data-solid="1"] a[aria-label]{background:none}
+[data-hero-header][data-solid="1"] a:hover{background-color:#1c231f!important;color:#f6f2ea!important;border-color:#1c231f!important}
+[data-hero-header][data-solid="1"] button span{background:#1c231f!important}
+[data-menu-panel]::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(160deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 40%,rgba(255,255,255,0) 70%,rgba(255,255,255,.14) 100%)}
+[data-menu-panel]>*{position:relative}
+
+/* ---- hover / focus states (the source's style-hover / style-focus attributes).
+        !important so they win over the element's inline base style, exactly as the
+        runtime-applied hover values did. ---- */
+.hv-ul:hover{background-size:100% 1px!important;color:#6f7e6b!important}
+.hv-ink:hover{color:#1c231f!important}
+.hv-sage:hover{color:#6f7e6b!important}
+.hv-arrow:hover{gap:1.6rem!important;color:#6f7e6b!important}
+.hv-arrow-ink:hover{gap:1.6rem!important;color:#1c231f!important}
+.hv-pill-light:hover{background-color:#f6f2ea!important;color:#1c231f!important;border-color:#f6f2ea!important}
+.hv-fill-light:hover{background-color:#f6f2ea!important;color:#1c231f!important}
+.hv-fill-ink:hover{background-color:#1c231f!important;color:#f6f2ea!important}
+.hv-lift:hover,.fc-lift:focus{transform:translateY(-0.4rem)!important}
+.hv-burger:hover{gap:0.55rem!important}
+.hv-top:hover{color:#6f7e6b!important;gap:1rem!important}
+.hv-noimg:hover{background-image:none!important}
+.fc-border:focus{border-color:#6f7e6b!important}
