@@ -84,9 +84,9 @@ export default function SiteChrome() {
   return (
 <div data-chrome="" style={{position:"relative",zIndex:"60",height:"0"}}>
   <header data-hero-header="" data-solid="0" style={{position:"fixed",top:"0",left:"0",right:"0",zIndex:"60",display:"flex",alignItems:"center",justifyContent:"space-between",gap:"1rem",padding:"1.66rem clamp(1rem,5vw,12rem)",color:"#f6f2ea",transition:"background-color .5s,padding .5s,color .5s,box-shadow .5s"}}>
-    <a href="/" aria-label="Graham Furtado — Home" style={{display:"flex",flexDirection:"column",gap:"0.36rem",lineHeight:"1",color:"#f6f2ea"}}>
-      <span style={{fontSize:"min(1rem,4.2vw)",fontWeight:"400",letterSpacing:"0.14em",textTransform:"uppercase",whiteSpace:"nowrap"}}>Graham Furtado</span>
-      <span style={{fontSize:"0.5rem",fontWeight:"600",letterSpacing:"0.26em",textTransform:"uppercase",opacity:"0.85",whiteSpace:"nowrap"}}>Property Developer</span>
+    <a href="/" aria-label="Graham Furtado — Home" style={{display:"inline-flex",flexDirection:"column",alignItems:"center",gap:"0.5rem",lineHeight:"1",color:"#f6f2ea"}}>
+      <span style={{fontSize:"min(1.3rem,5vw)",fontWeight:"400",letterSpacing:"0.16em",textTransform:"uppercase",whiteSpace:"nowrap",paddingLeft:"0.16em"}}>Graham Furtado</span>
+      <span style={{fontSize:"min(0.72rem,2.8vw)",fontWeight:"600",letterSpacing:"0.32em",textTransform:"uppercase",lineHeight:"1",opacity:"0.85",whiteSpace:"nowrap",textAlign:"center",paddingLeft:"0.32em"}}>Property Developer</span>
     </a>
     <div style={{display:"flex",alignItems:"center",gap:"min(2.33rem,5vw)"}}>
       <a href="/contact" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",border:"0.13rem solid #f6f2ea",borderRadius:"999px",padding:"0.75em 2.2em",fontSize:"0.72rem",fontWeight:"700",textTransform:"uppercase",lineHeight:"1.4",color:"#f6f2ea",transition:"background-color .3s cubic-bezier(.25,.46,.45,.94),color .3s cubic-bezier(.25,.46,.45,.94)"}} className="hv-fill-light">Contact</a>
@@ -102,9 +102,9 @@ export default function SiteChrome() {
     <div onClick={close} style={{position:"absolute",inset:"0",cursor:"pointer",backgroundImage:"linear-gradient(15deg,#1c231f33,#6f7e6b22)",WebkitBackdropFilter:"blur(3px)",backdropFilter:"blur(3px)",opacity:scrimO,transition:"opacity .6s cubic-bezier(.25,1,.5,1)"}}></div>
     <nav aria-label="Main navigation" data-menu-panel="" style={{position:"absolute",top:"0",right:"0",bottom:"0",width:"min(100%,max(36rem,42vw))",display:"flex",flexDirection:"column",background:"linear-gradient(180deg,rgba(246,242,234,.94),rgba(246,242,234,.88))",WebkitBackdropFilter:"blur(14px) saturate(1.4)",backdropFilter:"blur(14px) saturate(1.4)",borderLeft:"1px solid rgba(255,255,255,.6)",boxShadow:"inset 1px 0 0 rgba(255,255,255,.7),-1.5rem 0 4rem -1.5rem rgba(28,35,31,.3)",clipPath:clip,transition:"clip-path .7s cubic-bezier(.25,1,.5,1)",overflowY:"auto",overscrollBehavior:"contain"}}>
       <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"1.66rem clamp(1rem,5vw,4rem) 1.66rem clamp(1rem,5vw,3rem)"}}>
-        <div style={{display:"flex",flexDirection:"column",gap:"0.36rem",lineHeight:"1",color:"#6f7e6b",opacity:lo,transition:tLogo}}>
-          <span style={{fontSize:"min(1rem,4.2vw)",fontWeight:"400",letterSpacing:"0.14em",textTransform:"uppercase",whiteSpace:"nowrap"}}>Graham Furtado</span>
-          <span style={{fontSize:"0.5rem",fontWeight:"600",letterSpacing:"0.26em",textTransform:"uppercase",color:"#b9c0aa"}}>Property Developer</span>
+        <div style={{display:"inline-flex",flexDirection:"column",alignItems:"center",gap:"0.5rem",lineHeight:"1",color:"#6f7e6b",opacity:lo,transition:tLogo}}>
+          <span style={{fontSize:"min(1.3rem,5vw)",fontWeight:"400",letterSpacing:"0.16em",textTransform:"uppercase",whiteSpace:"nowrap",paddingLeft:"0.16em"}}>Graham Furtado</span>
+          <span style={{fontSize:"min(0.72rem,2.8vw)",fontWeight:"600",letterSpacing:"0.32em",textTransform:"uppercase",lineHeight:"1",color:"#b9c0aa",whiteSpace:"nowrap",textAlign:"center",paddingLeft:"0.32em"}}>Property Developer</span>
         </div>
         <button type="button" onClick={close} aria-label="Close menu" style={{display:"flex",alignItems:"center",justifyContent:"center",width:"2.66rem",height:"2.66rem",borderRadius:"999px",border:"1px solid rgba(255,255,255,.7)",background:"rgba(255,255,255,.35)",color:"#1c231f",cursor:"pointer",transition:"background-color .3s"}} className="hv-fill-ink">
           <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" style={{width:"40%",height:"40%"}}><path d="M1 1l10 10M11 1L1 11"></path></svg>
