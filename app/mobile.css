@@ -1,0 +1,70 @@
+/* ---- Mobile layout fixes ----
+   The pages keep their inline (desktop-first) styles verbatim from the source; the
+   rules below only correct layouts that break on phones and small tablets, using
+   !important where an inline value has to yield. ---- */
+
+/* Phones and small tablets */
+@media (max-width: 767px) {
+  /* Hero placeholder briefs: on desktop they sit bottom-right, on phones that lands on
+     top of the hero copy and the chat launcher. Park them under the header instead. */
+  [data-hero] [data-ph-label] {
+    top: 6.5rem !important;
+    bottom: auto !important;
+    left: clamp(1rem, 5vw, 12rem) !important;
+    right: clamp(1rem, 5vw, 12rem) !important;
+    text-align: left !important;
+    max-width: none !important;
+  }
+
+  /* About · Philosophy: the full-viewport statement leaves a blank half-screen on phones */
+  section[aria-label="Philosophy"] {
+    min-height: 0 !important;
+  }
+
+  /* About · The Path: the thumbnail no longer hangs right-aligned under the copy */
+  [data-path-img] {
+    flex: 0 0 100% !important;
+    margin-left: 0 !important;
+  }
+
+  /* Approach · stages: the pinned scene is a fixed 100svh box with overflow hidden, and on
+     a phone the big stage number + copy + 62vh image + dots add up to ~1100px, so the
+     number is clipped at the top and the stage dots fall below the fold. Shrink the
+     image and the decorative number so a whole stage fits in the viewport. */
+  [data-steps] > div {
+    justify-content: flex-start !important;
+    gap: min(1.4rem, 3vh) !important;
+    padding-top: min(4rem, 9vh) !important;
+  }
+  [data-steps] div:has(> [data-steps-roll]) {
+    font-size: min(15rem, 18vw, 32vh) !important;
+  }
+  [data-steps] [data-step-panel] {
+    gap: 1rem min(4rem, 4vw) !important;
+  }
+  [data-steps] [data-step-img] {
+    height: clamp(9rem, 28vh, 44rem) !important;
+  }
+}
+
+/* Phones and small tablets: the gallery grid. Below 768px only one 18rem column fits,
+   but the "span 2" tiles force auto-fit to open a second track that collapses to 0px
+   (still spending the gap), so the tiles placed in it vanish and the rest come up
+   short. Pin the grid to one column and drop the spans. */
+@media (max-width: 767px) {
+  #gallery [data-r="group"] {
+    grid-template-columns: 1fr !important;
+  }
+  #gallery [data-r="group"] > * {
+    grid-column: auto !important;
+  }
+}
+
+/* Phones */
+@media (max-width: 479px) {
+  /* The rolling stage number is decorative (aria-hidden) and "Stage 01 / 06" carries the
+     same information; dropping it is what makes short phones (667px) fit a whole stage. */
+  [data-steps] div:has(> [data-steps-roll]) {
+    display: none !important;
+  }
+}

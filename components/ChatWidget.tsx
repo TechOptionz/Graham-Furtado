@@ -197,7 +197,7 @@ export default function ChatWidget() {
       {/* Launcher */}
       <button type="button" onClick={() => setOpen(true)} aria-label="Open the assistant" aria-expanded={open ? "true" : "false"} aria-controls="gf-chat-panel"
         style={{ position: "fixed", right: "clamp(1rem,3vw,2.5rem)", bottom: "clamp(1rem,3vw,2.5rem)", zIndex: "55", display: "inline-flex", alignItems: "center", gap: "0.7em", border: "0", borderRadius: "999px", padding: "0.95em 1.7em", backgroundImage: "linear-gradient(15deg,#6f7e6b,#b9c0aa)", backgroundColor: "#1c231f", color: "#f6f2ea", font: "inherit", fontSize: "0.72rem", fontWeight: "700", letterSpacing: "0.06em", textTransform: "uppercase", cursor: "pointer", boxShadow: "0 1rem 2.5rem -1rem rgba(28,35,31,.45)", opacity: open ? 0 : 1, transform: open ? "translateY(0.5rem)" : "translateY(0)", pointerEvents: open ? "none" : "auto", transition: `opacity .4s ${ez}, transform .4s ${ez}, background-image .3s` }}
-        className="hv-noimg">
+        className="hv-noimg gf-btn gf-btn-launch">
         <span aria-hidden="true" style={{ width: "0.5rem", height: "0.5rem", borderRadius: "50%", background: "#f6f2ea", boxShadow: "0 0 0 0.2rem rgba(246,242,234,.25)" }}></span>
         Ask a question
       </button>
@@ -213,11 +213,11 @@ export default function ChatWidget() {
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
             {messages.length > 0 && (
-              <button type="button" onClick={reset} aria-label="Start a new conversation" title="New conversation" style={roundButton} className="hv-fill-ink">
+              <button type="button" onClick={reset} aria-label="Start a new conversation" title="New conversation" style={roundButton} className="hv-fill-ink gf-btn gf-btn-icon">
                 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: "42%", height: "42%" }}><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v2.6h-2.6" /></svg>
               </button>
             )}
-            <button type="button" onClick={() => setOpen(false)} aria-label="Close the assistant" style={roundButton} className="hv-fill-ink">
+            <button type="button" onClick={() => setOpen(false)} aria-label="Close the assistant" style={roundButton} className="hv-fill-ink gf-btn gf-btn-icon">
               <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" style={{ width: "40%", height: "40%" }}><path d="M1 1l10 10M11 1L1 11"></path></svg>
             </button>
           </div>
@@ -246,7 +246,7 @@ export default function ChatWidget() {
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", paddingTop: "0.2rem" }}>
               {suggestions.map((q) => (
                 <button key={q} type="button" onClick={() => void send(q)}
-                  style={{ border: "0.13rem solid #6f7e6b40", borderRadius: "999px", padding: "0.55em 1em", background: "transparent", color: "#5f665f", font: "inherit", fontSize: "0.72rem", fontWeight: "600", cursor: "pointer", textAlign: "left", transition: "background-color .3s, color .3s, border-color .3s" }} className="hv-fill-ink">
+                  style={{ border: "0.13rem solid #6f7e6b40", borderRadius: "999px", padding: "0.55em 1em", background: "transparent", color: "#5f665f", font: "inherit", fontSize: "0.72rem", fontWeight: "600", cursor: "pointer", textAlign: "left", transition: "background-color .3s, color .3s, border-color .3s" }} className="hv-fill-ink gf-btn gf-btn-chip">
                   {q}
                 </button>
               ))}
@@ -259,7 +259,7 @@ export default function ChatWidget() {
           <input ref={inputRef} value={input} onChange={(e) => setInput(e.target.value)} maxLength={2000} aria-label="Your question" placeholder="Ask about Graham or a development"
             style={{ flex: "1", minWidth: "0", padding: "0.85em 1.2em", borderRadius: "999px", border: "0.13rem solid #6f7e6b40", background: "#f6f2ea", color: "#1c231f", font: "inherit", fontSize: "0.85rem", outline: "none", transition: "border-color .3s" }} className="fc-border" />
           <button type="submit" disabled={!canSend} aria-label="Send"
-            style={{ flex: "none", display: "flex", alignItems: "center", justifyContent: "center", width: "2.6rem", height: "2.6rem", border: "0", borderRadius: "999px", backgroundImage: "linear-gradient(15deg,#6f7e6b,#b9c0aa)", backgroundColor: "#1c231f", color: "#f6f2ea", cursor: canSend ? "pointer" : "default", opacity: canSend ? 1 : 0.5, transition: "opacity .3s, background-image .3s" }} className="hv-noimg">
+            style={{ flex: "none", display: "flex", alignItems: "center", justifyContent: "center", width: "2.6rem", height: "2.6rem", border: "0", borderRadius: "999px", backgroundImage: "linear-gradient(15deg,#6f7e6b,#b9c0aa)", backgroundColor: "#1c231f", color: "#f6f2ea", cursor: canSend ? "pointer" : "default", opacity: canSend ? 1 : 0.5, transition: "opacity .3s, background-image .3s" }} className="hv-noimg gf-btn gf-btn-icon">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" style={{ width: "40%", height: "40%" }}><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" /></svg>
           </button>
         </form>

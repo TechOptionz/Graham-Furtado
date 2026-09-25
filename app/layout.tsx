@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./mobile.css";
 import { inter, inria } from "@/lib/fonts";
 import SmoothScroll from "@/components/SmoothScroll";
 import SiteChrome from "@/components/SiteChrome";
