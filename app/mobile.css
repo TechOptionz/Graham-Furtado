@@ -41,6 +41,25 @@
   }
 }
 
+/* Below 992px the two-column "pinned media + scrolling list" grids collapse to a single
+   column, but the first cell is still position:sticky, so it stays parked under the
+   header while the list that now follows it scrolls up behind it (Home · Expertise
+   image, development pages · Details column). Let it scroll with the page. */
+@media (max-width: 991px) {
+  [data-switch] > [data-r="img"],
+  div:has(> #det-h) {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  /* The scrolled header is a very light glass (16–34% tint). On a narrow screen the copy
+     runs the full width beneath it and reads straight through the wordmark, so give the
+     bar a near-opaque tint here. */
+  [data-hero-header][data-solid="1"] {
+    background: linear-gradient(180deg, rgba(246, 242, 234, 0.96), rgba(246, 242, 234, 0.9));
+  }
+}
+
 /* About · The Path: below 992px the row no longer has room for the figure column, so it
    wraps. Let it sit under the copy, reading left to right, instead of hanging
    right-aligned in a 9rem box. On tablets the dates keep their own column, so indent the
