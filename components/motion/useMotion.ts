@@ -8,7 +8,7 @@ import { GF } from "@/lib/gf";
 import { createCtx, type MotionCtx } from "./context";
 import { initConstants } from "./constants";
 import { initFooterMark } from "./footerMark";
-import { initPathRows } from "./pathRows";
+import { initCareer } from "./career";
 import { initLinesReveal } from "./linesReveal";
 import { initFade } from "./fade";
 import { initImgReveal } from "./imgReveal";
@@ -45,7 +45,7 @@ function setup(c: MotionCtx, first: boolean) {
   }
   initConstants(c);
   initFooterMark(c);
-  initPathRows(c);
+  initCareer(c);
   initLinesReveal(c);
   initFade(c);
   initImgReveal(c);

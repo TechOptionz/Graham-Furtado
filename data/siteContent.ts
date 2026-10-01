@@ -9,6 +9,12 @@ export const site = {
   region: "Queensland, Australia",
   company: "Furtado Property",
   copyright: "© 2026 Graham Furtado. All rights reserved.",
+  contact: {
+    email: "graham@furtadoproperty.com.au",
+    phone: "0418 982 517",
+    phoneHref: "tel:+61418982517",
+    postal: "PO Box 440, Paddington QLD 4064",
+  },
   links: {
     furtadoProperty: "https://www.furtadoproperty.com.au/",
     miraLiving: "https://miraliving.com.au/",
@@ -43,7 +49,7 @@ export const pageMeta = {
   about: {
     title: "About — Graham Furtado",
     description:
-      "Graham Furtado: Queensland property developer and experienced Brisbane real-estate professional, developer at Furtado Property.",
+      "Graham Furtado: Queensland property developer with more than thirty years in real estate, a licensed principal since 1999 and Director of Furtado Property.",
   },
   developments: {
     title: "Developments — Graham Furtado",

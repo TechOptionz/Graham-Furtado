@@ -21,12 +21,6 @@
     min-height: 0 !important;
   }
 
-  /* About · The Path: the thumbnail no longer hangs right-aligned under the copy */
-  [data-path-img] {
-    flex: 0 0 100% !important;
-    margin-left: 0 !important;
-  }
-
   /* Approach · stages: the pinned scene is a fixed 100svh box with overflow hidden, and on
      a phone the big stage number + copy + 62vh image + dots add up to ~1100px, so the
      number is clipped at the top and the stage dots fall below the fold. Shrink the
@@ -47,6 +41,27 @@
   }
 }
 
+/* About · The Path: below 992px the row no longer has room for the figure column, so it
+   wraps. Let it sit under the copy, reading left to right, instead of hanging
+   right-aligned in a 9rem box. On tablets the dates keep their own column, so indent the
+   figure to line up with the copy (13rem column + 2.5rem gap). */
+@media (max-width: 991px) {
+  [data-career-fig] {
+    flex: 0 0 100% !important;
+    flex-direction: row !important;
+    align-items: baseline !important;
+    justify-content: flex-start !important;
+    gap: 0.8rem !important;
+    text-align: left !important;
+    padding-top: 0 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  [data-career-fig] {
+    padding-left: 15.5rem !important;
+  }
+}
+
 /* Phones and small tablets: the gallery grid. Below 768px only one 18rem column fits,
    but the "span 2" tiles force auto-fit to open a second track that collapses to 0px
    (still spending the gap), so the tiles placed in it vanish and the rest come up
@@ -62,6 +77,13 @@
 
 /* Phones */
 @media (max-width: 479px) {
+  /* Contact rows: a narrower label column, so the e-mail address wraps once at the "@"
+     (its <wbr>) instead of mid-word */
+  [data-contact-rows] > div {
+    grid-template-columns: 5.5rem minmax(0, 1fr) !important;
+    gap: 0.6rem !important;
+  }
+
   /* The rolling stage number is decorative (aria-hidden) and "Stage 01 / 06" carries the
      same information; dropping it is what makes short phones (667px) fit a whole stage. */
   [data-steps] div:has(> [data-steps-roll]) {

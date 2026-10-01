@@ -1,6 +1,7 @@
 import { site, stages } from "@/data/siteContent";
 import { projects } from "@/data/projects";
 import { services } from "@/data/services";
+import { qualifications } from "@/data/career";
 
 /*
  * Fixed questions the assistant can answer without any API. Each entry has the question shown as a
@@ -83,11 +84,17 @@ export const FAQ: readonly FaqEntry[] = [
     answer: `Every project moves through six stages: ${stageNames}. It starts with finding the right site and a gap in the market, then defining the residential offer, working with experienced architects and designers, coordinating the consultant and construction team, and bringing the finished homes to market. The full approach is at /approach.`,
   },
   {
+    id: "qualifications",
+    question: "What are Graham's qualifications?",
+    patterns: [/\b(qualif\w*|credentials?|licen[cs]ed?|degree|education|educated|university|stud(y|ied))\b/],
+    answer: `Graham holds a ${qualifications[0].title} (${qualifications[0].issuer}, ${qualifications[0].year}) and a ${qualifications[1].title} from the ${qualifications[1].issuer} (${qualifications[1].year}). His full career history is at /about.`,
+  },
+  {
     id: "about",
     question: "Who is Graham Furtado?",
     suggest: true,
     patterns: [/\bwho is\b/, /\b(about|background|bio|biography|history|career|experience|years|agent|real[- ]?estate)\b/, /\bgraham\b/],
-    answer: `Graham Furtado is a ${site.role.toLowerCase()} based in ${site.basedIn}, working through ${site.company}. His career began in Brisbane real estate, with around thirty years in the market, and he has since moved from selling property to creating it, guiding projects from site opportunity through design, construction and market delivery. More at /about.`,
+    answer: `Graham Furtado is a ${site.role.toLowerCase()} based in ${site.basedIn}, working through ${site.company}. His career began at Ray White New Farm in 1992 and he has been a self-employed licensee since 1999, with more than thirty years in Queensland real estate. He has since moved from managing and selling property to creating it, guiding projects from site opportunity through design, construction and market delivery. More at /about.`,
   },
   {
     id: "company",
@@ -118,7 +125,7 @@ export const FAQ: readonly FaqEntry[] = [
     question: "How do I get in touch?",
     suggest: true,
     patterns: [/\b(contact|get in touch|in touch|reach|email|e-mail|phone|call|number|enquir\w*|inquir\w*|speak|talk|meet\w*|linkedin)\b/],
-    answer: `The best way to reach Graham is the contact form at /contact. You can also follow ${site.company} on LinkedIn at ${site.links.linkedin}, and for MIRA Living sales enquiries visit ${site.links.miraLiving}.`,
+    answer: `You can reach Graham on ${site.contact.phone} or at ${site.contact.email}, or send an enquiry through the contact form at /contact. You can also follow ${site.company} on LinkedIn at ${site.links.linkedin}, and for MIRA Living sales enquiries visit ${site.links.miraLiving}.`,
   },
   {
     id: "greeting",

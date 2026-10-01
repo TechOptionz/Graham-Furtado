@@ -1,3 +1,5 @@
+import { site } from "@/data/siteContent";
+
 /** Enquiries block + footer, ported from SiteFooter.dc.html. Prop: showContact (default true). */
 export default function SiteFooter({ showContact = true }: { showContact?: boolean }) {
   return (
@@ -15,9 +17,9 @@ export default function SiteFooter({ showContact = true }: { showContact?: boole
             <p style={{margin:"0",fontSize:"1.13rem",lineHeight:"1.45",color:"#5f665f",textWrap:"pretty"}}>For development, site and residential property enquiries, get in touch with Graham directly.</p>
             <a href="/contact" style={{alignSelf:"flex-start",display:"inline-flex",alignItems:"center",gap:"0.9rem",fontSize:"0.8rem",fontWeight:"700",textTransform:"uppercase",color:"#1c231f",paddingBottom:"0.5rem",background:"linear-gradient(#1c231f,#1c231f) 0 100%/100% 0.13rem no-repeat",transition:"gap .6s cubic-bezier(.25,1,.5,1),color .3s"}} className="hv-arrow gf-btn gf-btn-arrow">Start a conversation <svg viewBox="0 0 16 10" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" style={{width:"1rem",height:"0.66rem"}}><path d="M1 5h14M10.5 1L15 5l-4.5 4"></path></svg></a>
           </div>
-          <div data-r="group" style={{display:"flex",flexDirection:"column"}}>
-            <div style={{display:"grid",gridTemplateColumns:"7rem 1fr",gap:"1rem",padding:"0.9rem 0",borderBottom:"0.13rem solid #6f7e6b40"}}><span style={{fontSize:"0.72rem",fontWeight:"700",textTransform:"uppercase",color:"#6f7e6b",paddingTop:"0.2rem"}}>E-mail</span><span style={{fontWeight:"600",color:"#5f665f"}}>[ Email address — to be confirmed ]</span></div>
-            <div style={{display:"grid",gridTemplateColumns:"7rem 1fr",gap:"1rem",padding:"0.9rem 0",borderBottom:"0.13rem solid #6f7e6b40"}}><span style={{fontSize:"0.72rem",fontWeight:"700",textTransform:"uppercase",color:"#6f7e6b",paddingTop:"0.2rem"}}>Phone</span><span style={{fontWeight:"600",color:"#5f665f"}}>[ Phone number — to be confirmed ]</span></div>
+          <div data-r="group" data-contact-rows="" style={{display:"flex",flexDirection:"column"}}>
+            <div style={{display:"grid",gridTemplateColumns:"7rem minmax(0,1fr)",gap:"1rem",padding:"0.9rem 0",borderBottom:"0.13rem solid #6f7e6b40"}}><span style={{fontSize:"0.72rem",fontWeight:"700",textTransform:"uppercase",color:"#6f7e6b",paddingTop:"0.2rem"}}>E-mail</span><span style={{fontWeight:"600",color:"#1c231f",overflowWrap:"anywhere"}}><a href={`mailto:${site.contact.email}`} style={{transition:"color .3s"}} className="hv-sage">{site.contact.email.split("@")[0]}@<wbr />{site.contact.email.split("@")[1]}</a></span></div>
+            <div style={{display:"grid",gridTemplateColumns:"7rem minmax(0,1fr)",gap:"1rem",padding:"0.9rem 0",borderBottom:"0.13rem solid #6f7e6b40"}}><span style={{fontSize:"0.72rem",fontWeight:"700",textTransform:"uppercase",color:"#6f7e6b",paddingTop:"0.2rem"}}>Phone</span><span style={{fontWeight:"600",color:"#1c231f"}}><a href={site.contact.phoneHref} style={{transition:"color .3s"}} className="hv-sage">{site.contact.phone}</a></span></div>
             <div style={{display:"grid",gridTemplateColumns:"7rem 1fr",gap:"1rem",padding:"0.9rem 0",borderBottom:"0.13rem solid #6f7e6b40"}}><span style={{fontSize:"0.72rem",fontWeight:"700",textTransform:"uppercase",color:"#6f7e6b",paddingTop:"0.2rem"}}>Based in</span><span style={{fontWeight:"600",color:"#1c231f"}}>Brisbane, Queensland</span></div>
           </div>
         </div>
@@ -54,6 +56,8 @@ export default function SiteFooter({ showContact = true }: { showContact?: boole
         <div style={{display:"flex",flexDirection:"column",gap:"0.55rem"}}>
           <span style={{fontSize:"0.7rem",fontWeight:"700",textTransform:"uppercase",color:"#6f7e6b",letterSpacing:"0.08em",marginBottom:"0.6rem"}}>Contact</span>
           <span style={{fontSize:"0.95rem",color:"#1c231f",fontWeight:"500"}}>Brisbane, Queensland</span>
+          <a href={site.contact.phoneHref} style={{alignSelf:"flex-start",color:"#1c231f",fontWeight:"500",fontSize:"0.95rem",lineHeight:"1.3",background:"linear-gradient(currentColor,currentColor) 0 100%/0% 1px no-repeat",transition:"background-size .6s cubic-bezier(.25,1,.5,1),color .3s"}} className="hv-ul">{site.contact.phone}</a>
+          <a href={`mailto:${site.contact.email}`} style={{alignSelf:"flex-start",color:"#1c231f",fontWeight:"500",fontSize:"0.95rem",lineHeight:"1.3",background:"linear-gradient(currentColor,currentColor) 0 100%/0% 1px no-repeat",transition:"background-size .6s cubic-bezier(.25,1,.5,1),color .3s"}} className="hv-ul">E-mail Graham</a>
           <a href="/contact" style={{alignSelf:"flex-start",color:"#1c231f",fontWeight:"500",fontSize:"0.95rem",lineHeight:"1.3",background:"linear-gradient(currentColor,currentColor) 0 100%/0% 1px no-repeat",transition:"background-size .6s cubic-bezier(.25,1,.5,1),color .3s"}} className="hv-ul">Enquiries →</a>
         </div>
       </div>

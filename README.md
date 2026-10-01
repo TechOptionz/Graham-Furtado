@@ -20,12 +20,12 @@ npm run build && npm start
 | `components/SiteFooter.tsx` | enquiries block + footer (`showContact` prop) |
 | `components/SmoothScroll.tsx` | Lenis on gsap's ticker, `lenis.on('scroll', ScrollTrigger.update)` |
 | `components/PageMotion.tsx` → `components/motion/useMotion.ts` | runs the attribute-driven motion for the current route inside a `gsap.context`, reverts it on route change |
-| `components/motion/*.ts` | one module per `site.js` block: `constants`, `footerMark`, `pathRows`, `linesReveal`, `fade` (fade/group/slide), `imgReveal` (img/rule), `parallax`, `count`, `stack`, `heroMask`, `marquee`, `steps`, `switcher`, `zoom`, `heroHeader`, `links` (anchors + veil route transitions), `cursor` (disabled, as in the source), `heroIntro` (veil lift, Home entry sequence) |
+| `components/motion/*.ts` | one module per `site.js` block: `constants`, `footerMark`, `career` (About timeline), `linesReveal`, `fade` (fade/group/slide), `imgReveal` (img/rule), `parallax`, `count`, `stack`, `heroMask`, `marquee`, `steps`, `switcher`, `zoom`, `heroHeader`, `links` (anchors + veil route transitions), `cursor` (disabled, as in the source), `heroIntro` (veil lift, Home entry sequence) |
 | `components/media/HeroVideo.tsx` | the MIRA Living / West End hero video loop (`data/media.ts` → `HERO_VIDEO`): poster under a muted, looping, `playsInline` `<video>` that fades in on `playing`; stays on the poster under `prefers-reduced-motion`, pauses when the hero is off-screen |
 | `components/media/MediaSlot.tsx` | renders a `data/media.ts` key → `next/image` (cover, `50% 62%`) or the striped placeholder + brief |
 | `components/ContactForm.tsx` | the contact form (placeholder, not connected to an inbox) |
 | `data/media.ts` | `GF_MEDIA`, verbatim. Set `src` on a key to replace its placeholder site-wide |
-| `data/siteContent.ts`, `data/projects.ts`, `data/services.ts` | page meta, nav, stages, projects and services copy |
+| `data/siteContent.ts`, `data/projects.ts`, `data/services.ts`, `data/career.ts` | page meta, nav, stages, projects and services copy; career history, qualifications and managed portfolio (About page + chat assistant) |
 | `fonts/`, `public/media/` | the source fonts and photography; `public/media/video/` holds the two hero loops (1280×720 H.264, no audio) and their poster frames |
 | `scripts/convert.mjs`, `scripts/fragments.mjs` | the one-shot HTML → JSX converters used to generate the pages, chrome, footer and form |
 

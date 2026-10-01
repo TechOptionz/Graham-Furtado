@@ -171,17 +171,17 @@ export default function Page() {
       <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(min(100%,26rem),1fr))",gap:"3rem 3.33rem",alignItems:"end"}}>
         <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
           <span data-r="fade" style={{fontSize:"0.8rem",fontWeight:"700",textTransform:"uppercase",color:"#6f7e6b",letterSpacing:"0.04em"}}>Experience</span>
-          <div data-r="lines" aria-label="Around 30 years" style={{fontFamily:"var(--font-inria),serif",fontStyle:"italic",fontWeight:"300",lineHeight:"0.8",letterSpacing:"-0.03em"}}>
+          <div data-r="lines" aria-label="Over 30 years" style={{fontFamily:"var(--font-inria),serif",fontStyle:"italic",fontWeight:"300",lineHeight:"0.8",letterSpacing:"-0.03em"}}>
             <span style={{display:"block",overflow:"hidden",padding:"0.02em 0 0.06em"}}><span data-line="" style={{display:"flex",alignItems:"flex-start",gap:"0.06em"}}><span data-count="30" style={{fontSize:"min(24rem,56vw)",backgroundImage:"linear-gradient(15deg,#6f7e6b,#b9c0aa)",WebkitBackgroundClip:"text",backgroundClip:"text",WebkitTextFillColor:"transparent",paddingRight:"0.04em"}}>30</span><span style={{fontSize:"min(4rem,11vw)",color:"#6f7e6b",marginTop:"0.2em",fontStyle:"italic"}}>yrs</span></span></span>
           </div>
         </div>
         <div style={{display:"flex",flexDirection:"column",gap:"2rem",paddingBottom:"1rem"}}>
           <h2 id="exp-h" data-r="lines" style={{margin:"0",fontSize:"min(2.4rem,7.4vw)",fontWeight:"600",lineHeight:"1.12",color:"#1c231f",letterSpacing:"-0.02em"}}>
-            <span style={{display:"block",overflow:"hidden",paddingBottom:"0.04em"}}><span data-line="" style={{display:"block"}}>Around three decades in</span></span>
+            <span style={{display:"block",overflow:"hidden",paddingBottom:"0.04em"}}><span data-line="" style={{display:"block"}}>Over three decades in</span></span>
             <span style={{display:"block",overflow:"hidden",paddingBottom:"0.04em"}}><span data-line="" style={{display:"block"}}>Brisbane real estate, now</span></span>
             <span style={{display:"block",overflow:"hidden",paddingBottom:"0.04em"}}><span data-line="" style={{display:"block"}}>applied to development.</span></span>
           </h2>
-          <p data-r="fade" style={{margin:"0",maxWidth:"32rem",textWrap:"pretty"}}>Development-industry reporting describes Graham as a long-time Brisbane real-estate agent of around thirty years’ standing. That market knowledge informs the sites, products and projects he takes on through Furtado Property.</p>
+          <p data-r="fade" style={{margin:"0",maxWidth:"32rem",textWrap:"pretty"}}>Graham has worked in Queensland real estate since 1992, across sales, property management and on-site management, and as a licensed principal since 1999. That market knowledge informs the sites, products and projects he takes on through Furtado Property.</p>
           <div data-r="group" style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(min(100%,9rem),1fr))",gap:"1.66rem 2rem"}}>
             <div style={{display:"flex",flexDirection:"column",gap:"0.53rem",paddingTop:"1.33rem",borderTop:"0.13rem solid #6f7e6b40"}}><span data-count="" style={{fontFamily:"var(--font-inria),serif",fontStyle:"italic",fontSize:"min(3.06rem,11vw)",lineHeight:"1",color:"#6f7e6b"}}>20+</span><span style={{fontSize:"0.72rem",fontWeight:"700",textTransform:"uppercase",lineHeight:"1.3"}}>Years of property experience — Furtado Property</span></div>
             <div style={{display:"flex",flexDirection:"column",gap:"0.53rem",paddingTop:"1.33rem",borderTop:"0.13rem solid #6f7e6b40"}}><span data-count="" style={{fontFamily:"var(--font-inria),serif",fontStyle:"italic",fontSize:"min(3.06rem,11vw)",lineHeight:"1",color:"#6f7e6b"}}>25</span><span style={{fontSize:"0.72rem",fontWeight:"700",textTransform:"uppercase",lineHeight:"1.3"}}>Residences at MIRA Living, Bargara</span></div>
